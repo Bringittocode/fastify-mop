@@ -8,6 +8,12 @@ you still have the complete features of mysql in nodejs except for mysql pool
 ## INSTALLATION
 > npm i @bringittocode/fastify-mop
 
+## FEATURES
+
+* Auto reconnection if connection timeout or an error occured
+* You still have all the method of [MYSQL](https://www.npmjs.com/package/mysql) except for pool.
+* You have an event to listen on if connection failed or successful
+
 ## USAGE
 
 ### import the module
