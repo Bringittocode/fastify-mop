@@ -1,24 +1,38 @@
 {
-  "name": "fastify-mysql",
+  "name": "@bringittocode/fastify-mop",
   "version": "1.0.0",
-  "description": "create a long live connection between your application and mysql in fastify. this is not mysql pool.",
+  "description": "This is a fastify plugin to create long live connection between your application and mysql, this is not mysql pool.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "fastify-plugin": "^3.0.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bringittocode/fastify-mysql.git"
+    "url": "git+https://github.com/Bringittocode/fastify-mop"
   },
   "keywords": [
     "mysql",
     "fastify",
     "nodejs"
   ],
-  "author": "hazeezet",
+  "authors": [
+    {
+      "name": "hazeezet",
+      "email": "hazeezet@gmail.com"
+    },
+    {
+      "name": "bringittocode",
+      "email": "bringittocode@gmail.com",
+      "role": "Orgnisation"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bringittocode/fastify-mysql/issues"
+    "url": "https://github.com/Bringittocode/fastify-mop/issues"
   },
-  "homepage": "https://github.com/Bringittocode/fastify-mysql#readme"
+  "homepage": "https://github.com/Bringittocode/fastify-mop#readme"
 }
