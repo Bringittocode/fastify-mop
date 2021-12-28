@@ -1,8 +1,9 @@
 {
   "name": "@bringittocode/fastify-mop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a fastify plugin to create long live connection between your application and mysql, this is not mysql pool.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
