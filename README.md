@@ -30,7 +30,7 @@ fastify.register(mysql,{
 
 > DATABASE_INFO => your database detailes.
 
-> WAIT_TIME => how many miliseconds to wait before reconnecting if there is any disconnection
+> WAIT_TIME => how many miliseconds to wait before reconnecting if there is any disconnection.. DEFAULT 5 seconds
 
 After registering you then have mysql instance in all of your application
 ```js

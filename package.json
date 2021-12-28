@@ -31,6 +31,9 @@
     }
   ],
   "license": "MIT",
+  "publishConfig": {
+    "@bringittocode:registry": "https://npm.pkg.github.com"
+  },
   "bugs": {
     "url": "https://github.com/Bringittocode/fastify-mop/issues"
   },
