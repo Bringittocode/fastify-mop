@@ -62,16 +62,16 @@ const Mysql = fp(async function (fastify, options) {
 
             fastify.DB.on('error', function (error) {
                 const code = error.code;
-
                 emitter.emit("disconnect", code)
+                fastify.DB.destroy();
                 CONNECT();
             });
         } catch (e) {
             emitter.emit("connect", true)
             fastify.DB.on('error', function (error) {
                 const code = error.code;
-
-                emitter.emit("disconnect", code)
+                emitter.emit("disconnect", code);
+                fastify.DB.destroy();
                 CONNECT();
             });
         }
