@@ -19,6 +19,9 @@ you still have the complete features of mysql in nodejs except for mysql pool
 ### import the module
 ```js
 import mysql from "@bringittocode/fastify-mop";
+
+//OR
+const mysql = require('@bringittocode/fastify-mop');
 ```
 
 ### Register the module
