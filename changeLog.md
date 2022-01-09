@@ -1,3 +1,6 @@
+VERSION 1.0.3::::
+    * Bug fixed
+    
 VERSION 1.0.2::::
     * Bug fixed
 
