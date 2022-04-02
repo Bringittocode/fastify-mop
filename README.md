@@ -6,12 +6,13 @@ this package helps you to manage auto reconnection.
 you still have the complete features of mysql in nodejs except for mysql pool
 
 ## INSTALLATION
-> npm i @bringittocode/fastify-mop
+> npm i @bringittocode/fastify-mop@latest
 
 ## FEATURES
 
+* One library rule them all... i.e you can use any mysql module with this library to manage connection.
 * Auto reconnection if connection timeout or an error occured
-* You still have all the method of [MYSQL](https://www.npmjs.com/package/mysql) except for pool.
+* You still have all the method of [MYSQL2](https://www.npmjs.com/package/mysql2) except for pool.
 * You have an event to listen on if connection failed or successful
 
 ## USAGE
@@ -19,9 +20,13 @@ you still have the complete features of mysql in nodejs except for mysql pool
 ### import the module
 ```js
 import mysql from "@bringittocode/fastify-mop";
+// Import any mysql module you wish to use
+import mysql from "mysql";
 
 //OR
 const mysql = require('@bringittocode/fastify-mop');
+// Import any mysql module you wish to use
+const mysql2 = require("mysql2");
 ```
 
 ### Register the module
@@ -34,12 +39,15 @@ fastify.register(mysql,{
         database: "",
     },
     WAIT_TIME: 2000,
+    MODULE: mysql //mysql2
 });
 ```
 
-> DATABASE_INFO => your database detailes.
+> DATABASE_INFO => your database detailes... you can also put any valid MYSQL initialization option.
 
 > WAIT_TIME => how many miliseconds to wait before reconnecting if there is any disconnection.. DEFAULT 5 seconds
+
+> MODULE => Any MYSQL module you wish to use.. DEFAULT [MYSQL2](https://www.npmjs.com/package/mysql2)
 
 After registering you then have mysql instance in all of your application
 ```js
@@ -52,7 +60,10 @@ fastify.DB_INFO
 
 what you have to do is to focus on your query as you would if no package is used
 
-learn more => https://www.npmjs.com/package/mysql;
+> CURRENTLY SUPPORTED MODULE.
+
+* [MYSQL](https://www.npmjs.com/package/mysql)
+* [MYSQL2](https://www.npmjs.com/package/mysql2)
 
 ```js
     const query = "SELECT * FROM your_table where ?";

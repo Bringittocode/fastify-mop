@@ -16,13 +16,13 @@ const Mysql = fp(async function (fastify, options) {
             database: ''
         }
     } = options;
-    const {
-        WAIT_TIME: WAIT_TIME = 5000
-    } = options;
 
-    console.log(WAIT_TIME);
+    const {WAIT_TIME: WAIT_TIME = 5000} = options;
+
+    const {MODULE: MODULE = mysql} = options;
+
     // test connection 
-    const connection = mysql.createConnection(DATABASE_INFO);
+    const connection = MODULE.createConnection(DATABASE_INFO);
 
     const emitter = new events.EventEmitter();
     // store test connection
@@ -37,7 +37,7 @@ const Mysql = fp(async function (fastify, options) {
 
                 if (connection.state === "disconnected") {
 
-                    const connection = mysql.createConnection(DATABASE_INFO);
+                    const connection = MODULE.createConnection(DATABASE_INFO);
 
                     connection.connect(function (error) {
                         if (error) {

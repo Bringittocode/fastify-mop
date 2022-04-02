@@ -1,6 +1,6 @@
 {
   "name": "@bringittocode/fastify-mop",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a fastify plugin to create long live connection between your application and mysql, this is not mysql pool.",
   "main": "index.js",
   "type": "module",
@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "mysql": "^2.18.1",
-    "fastify-plugin": "^3.0.0"
+    "fastify-plugin": "^3.0.0",
+    "mysql2": "^2.3.3"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   "keywords": [
     "mysql",
     "fastify",
-    "nodejs"
+    "nodejs",
+    "mysql2"
   ],
   "authors": [
     {
