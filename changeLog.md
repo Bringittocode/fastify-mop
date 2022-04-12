@@ -1,3 +1,6 @@
+VERSION 1.0.5::::
+    * Update readme file.
+
 VERSION 1.0.3::::
     * Support for mysql2
 
