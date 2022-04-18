@@ -1,7 +1,7 @@
 {
   "name": "@bringittocode/fastify-mop",
-  "version": "1.0.5",
-  "description": "This is a fastify plugin to create long live connection between your application and mysql, this is not mysql pool.",
+  "version": "1.0.6",
+  "description": "This is a fastify plugin to create long live connection between your application and mysql or postgresql, this is not mysql pool.",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -19,7 +19,11 @@
     "mysql",
     "fastify",
     "nodejs",
-    "mysql2"
+    "mysql2",
+    "pg",
+    "postgre",
+    "postgresql",
+    "sql"
   ],
   "authors": [
     {
