@@ -1,3 +1,7 @@
+VERSION 1.0.6::::
+    * Support for postgresql.
+    * Bugs fixes
+
 VERSION 1.0.5::::
     * Update readme file.
 
